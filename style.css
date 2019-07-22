@@ -74,7 +74,7 @@ a {
     box-shadow: none !important;
 }
 
-/* button-back */
+/* BUTTON-BACK */
 .button-back {
     display: inline-block;
 
@@ -86,4 +86,21 @@ a {
 .button-back:hover {
     color: white;
     background-color: cadetblue; 
+}
+
+/* SHARE BUTTONS */
+.container {
+    width: auto;
+    margin-top: 20%;
+}
+  
+img {
+    width: 30px;
+    height: 30px;
+    padding: 0 20px;
+    transition: transform 0.2s;
+}
+  
+img:hover {
+    transform: scale(1.8);
 }
