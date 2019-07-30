@@ -1,10 +1,9 @@
 // Gallery js code 
-// поскольку скрипт занружаеться первым навешено событие для загружбы дом
 
 document.addEventListener('DOMContentLoaded', function (event) {
     var glide = new Glide('.glide', {
         type: 'carousel',
-        perView: 4,
+        perView: 3,
         focusAt: 'center',
         breakpoints: { 
             800: {

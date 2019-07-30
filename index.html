@@ -27,11 +27,11 @@
     <!-- Fixed menu -->
     <div class="navbar">
         <ul class="topmenu">
-            <li><a href="#about">About</a></li> 
-            <li><a href="#services">Services</a></li> 
-            <li><a href="#gallery">Gallery</a></li> 
-            <li><a href="booking.html">Booking</a></li> 
-            <li><a href="#contact">Contact<i class="fa fa-angle-down">&#60</i></a>
+            <li class="topmenu_border"><a href="#about">About</a></li> 
+            <li class="topmenu_border"><a href="reservations.html">Reservations</a></li> 
+            <li class="topmenu_border"><a href="#gallery">Gallery</a></li> 
+            <li class="topmenu_border"><a href="booking.html">Booking</a></li> 
+            <li ><a href="#contact">Contact<i class="fa fa-angle-down">&#60</i></a>
                 <ul class="submenu">
                     <li><a href="#registration"></a>Redistration</li>
                     <li><a href="#contactme"></a>Info</li>
@@ -45,7 +45,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#booking">Booking</a></li>
+            <li><a href="booking.html">Booking</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -59,9 +59,11 @@
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-            <li class="glide__slide">0</li>
-            <li class="glide__slide">1</li>
-            <li class="glide__slide">2</li>
+            <li class="glide__slide"><img src="../HotelSiteApp/image/2.jpeg" alt="" width="300px" height="300px"></li>
+            <li class="glide__slide"><img src="../HotelSiteApp/image/3.jpeg" alt="" width="300px" height="300px"></li>
+            <li class="glide__slide"><img src="../HotelSiteApp/image/4.jpeg" alt="" width="300px" height="300px"></li>
+            <li class="glide__slide"><img src="../HotelSiteApp/image/5.jpeg" alt="" width="300px" height="300px"></li>
+            <li class="glide__slide"><img src="../HotelSiteApp/image/6.jpeg" alt="" width="300px" height="300px"></li>
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -72,17 +74,46 @@
             <button class="glide__bullet" data-glide-dir="=0"></button>
             <button class="glide__bullet" data-glide-dir="=1"></button>
             <button class="glide__bullet" data-glide-dir="=2"></button>
+            <button class="glide__bullet" data-glide-dir="=3"></button>
+            <button class="glide__bullet" data-glide-dir="=4"></button>
+            <button class="glide__bullet" data-glide-dir="=5"></button>
         </div>
     </div>
     <!-- Bookking form -->
     <section></section>
-    <!-- Contact -->
+    <!-- Info -->
     <footer>
-        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.301771058101!2d30.638360851128603!3d50.39821339890792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4523fb1edb1%3A0x6612bd9c908002b6!2z0YPQuy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0JzQuNGI0YPQs9C4LCAyLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1563351844673!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-        <a name="fb_share" type="icon"
-   share_url="http://bit.ly/FBshareArticle"></a> 
-<script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript">
-</script>
+        <div class="container_info">
+            <form class="info_form">
+                <hr>
+                <h1 class="info_header">Get in touch with us!</h1>
+                <p>info@sahilhostel.com</p>
+                <p>Zarifa Aliyeva str. 27 ( new 61 )</p>
+                <p>TEL:+994(50) 888-21-01</p>
+                <hr>
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+            
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Your email.." required>
+            
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+                </select>
+            
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            
+                <input type="submit" value="Submit">
+            
+            </form>
+        </div>
+        <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.301771058101!2d30.638360851128603!3d50.39821339890792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4523fb1edb1%3A0x6612bd9c908002b6!2z0YPQuy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0JzQuNGI0YPQs9C4LCAyLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1563351844673!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
     </footer>
     </body>
 </html>

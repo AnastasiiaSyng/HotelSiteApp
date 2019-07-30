@@ -6,10 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css"> 
     <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"> -->
-    <script src="..//project/index.js"></script>
+    <script src="index1.js"></script>
+    <script src="validator.js"></script>
 </head>
-<body> 
-    <p>Booking</p>
+<body>
+    <div class="booking">
+        <hr>
+        <h1>Booking&Details</h1>
+        <hr>
+        <div class="form_booking">
+            <form id="inputForm">
+                <div class="form-group">
+                    <label for="nameInput">Name</label>
+                    <input type="text" id="nameInput" class="form_control" placeholder="Put your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="text" id="emailInput" class="form_control" placeholder="Put your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="arriveInput">Arrive</label>
+                    <input type="date" name="calendar" id="arriveInput" max="2019-09-01" min="2019-08-01" required>
+                </div>
+                <div class="form-group">
+                    <label for="departureInput">Departure</label>
+                    <input type="date" name="calendar" id="departureInput" max="2019-09-01" min="2019-08-01" required>
+                </div>
+                <div class="form-group">
+                    <label for="peopleInput">People</label>
+                    <select id="peopleInput" class="form_control">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select> 
+                </div>
+                <div class="form-group">
+                    <label for="roomInput">Room</label>
+                    <select id="roomInput" class="form_control">
+                        <option value="single">single</option>
+                        <option value="double">double</option>
+                        <option value="quadro">quadro</option>
+                    </select> 
+                </div>
+                <div class="form-group">
+                    <label for="needsInput">Please describe your needs</label><br>
+                    <textarea class="form_control" id="needsInput" cols="30" rows="10">Comment</textarea>
+                </div>
+                <button id="submit" type="submit" >Submit</button>
+            </form>
+            <div>
+                <div id="bookingList"></div>
+            </div>
+        </div>
+        
+    </div>
+   
+
+
     <a href="index.html" class="button-back">&larr;Вернуться назад</a>
 </body>
 </html>
