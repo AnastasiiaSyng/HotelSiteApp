@@ -1,10 +1,10 @@
 // Booking js code / 
 // push to local storage 
-
 document.addEventListener('DOMContentLoaded', function () { 
-    document.getElementById('inputForm').addEventListener('submit', saveInputForm);
+    document.getElementById('inputForm').addEventListener('submit', saveBookingToLocalS);
 
-    function saveInputForm (e) {
+    function saveBookingToLocalS (e) {
+    
         var nameInput = document.getElementById("nameInput").value;
         var emailInput = document.getElementById("emailInput").value;
         var arriveInput = document.getElementById("arriveInput").value;
@@ -22,27 +22,27 @@ document.addEventListener('DOMContentLoaded', function () {
             room: roomInput,
             needs: needsInput,
         }
-        if (localStorage.getItem('valueInput') === null) {
-            var valueInput = [];
-            valueInput.push(valueInputs);
-            localStorage.setItem('valueInput', JSON.stringify(valueInput));
-        } else {
-            var valueInput = JSON.parse(localStorage.getItem('valueInput'));
-            valueInput.push(valueInputs);
-            localStorage.setItem('valueInput', JSON.stringify(valueInput));
+        
+        if (validateReservation()) {
+            if (localStorage.getItem('valueInput') === null) {
+                var valueInput = [];
+                valueInput.push(valueInputs);
+                localStorage.setItem('valueInput', JSON.stringify(valueInput));
+            } else {
+                var valueInput = JSON.parse(localStorage.getItem('valueInput'));
+                valueInput.push(valueInputs);
+                localStorage.setItem('valueInput', JSON.stringify(valueInput));
+            }
+            // document.getElementById('inputForm').reset();
+            confirmMessage();
+            e.preventDefault(); 
         }
-          
-        document.getElementById('inputForm').reset();
-        
-        fetchInput();
-        
-        e.preventDefault(); 
     }
 })
 
-// confirmation 
+// confirmation window
 
-function fetchInput () {
+function confirmMessage() {
     var valueInput = JSON.parse(localStorage.getItem("valueInput"))
     var bookingList = document.getElementById("bookingList")
 
@@ -50,12 +50,10 @@ function fetchInput () {
 
     for (var i = 0; i < valueInput.length; i++) {
         var name = valueInput[i].name;
-        // var email = valueInput[i].email;
         var arrive = valueInput[i].arrive;
         var departure = valueInput[i].departure;
         var people = valueInput[i].people;
         var room = valueInput[i].room;
-        // var needs = valueInput[i].needs;
     } 
 
     bookingList.innerHTML += '<div class="well">'+
