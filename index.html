@@ -16,54 +16,56 @@
     
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script src="gallery.js"></script>
-   
 
-    
 </head>
 
 </head>
 <body> 
-    
     <!-- Fixed menu -->
-    <div class="navbar">
-        <ul class="topmenu">
-            <li class="topmenu_border"><a href="#about">About</a></li> 
-            <li class="topmenu_border"><a href="reservations.html">Reservations</a></li> 
-            <li class="topmenu_border"><a href="#gallery">Gallery</a></li> 
-            <li class="topmenu_border"><a href="booking.html">Booking</a></li> 
-            <li ><a href="#contact">Contact<i class="fa fa-angle-down">&#60</i></a>
-                <ul class="submenu">
-                    <li><a href="#registration"></a>Redistration</li>
-                    <li><a href="#contactme"></a>Info</li>
-                </ul>
-            </li> 
-        </ul>
+     <nav class="navbar">
+        <div class="container">
+            <ul class="navbar__menu">
+                <li><a href="#about">About</a></li> 
+                <li><a href="reservations.html">Reservations</a></li> 
+                <li><a href="services.html">Services</a></li> 
+                <li><a href="booking.html">Booking</a></li> 
+                <li ><a href="#contact">Contact</a>
+                    <ul class="submenu navbar__submenu">
+                        <li><a href="#registration">Get in touch</a></li>
+                        <li><a href="#address">Address</a></li>
+                    </ul>
+                </li> 
+            </ul>
+        </div> 
+    </nav> 
+    <div class="header">
+        <header >
+            <h1 class="header hotel__name__header">Westend Hotel Kiev</h1>
+            <h2 class="header header__welcome"> Welcome! <br> We are glad to welcome you to our site. </h2>
+        </header>
     </div>
-     <!-- Breadcrumbs    -->
-    <nav>
-        <ul class="breadcrumb">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="booking.html">Booking</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-     <!-- Main image -->
-    <nav></nav>
-     <!-- About us -->
-    <header></header>
-    <!-- Services -->
-    <section></section>
+    <!-- About -->
+    <section id="about">
+        <div class="about title__about"> 
+            <h3>About us</h3>
+            <p>Westend Hostel Kiev offers 4 cozy rooms of different categories. 
+                We have 1 single rooms for a quiet comfortable rest, one 
+                with two separate beds,  one room with a king size bed for traveling 
+                couples and one room for companies of three persons. Each room is equipped 
+                with comfortable beds with orthopedic mattresses and air conditioning.
+                We can offer you a common kitchen equipped with a microwave and a fridge, 
+                an electric kettle and all the necessary utensils.</p> 
+        </div>   
+    </section>
     <!-- Gallery -->
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
-            <li class="glide__slide"><img src="../HotelSiteApp/image/2.jpeg" alt="" width="300px" height="300px"></li>
-            <li class="glide__slide"><img src="../HotelSiteApp/image/3.jpeg" alt="" width="300px" height="300px"></li>
-            <li class="glide__slide"><img src="../HotelSiteApp/image/4.jpeg" alt="" width="300px" height="300px"></li>
-            <li class="glide__slide"><img src="../HotelSiteApp/image/5.jpeg" alt="" width="300px" height="300px"></li>
-            <li class="glide__slide"><img src="../HotelSiteApp/image/6.jpeg" alt="" width="300px" height="300px"></li>
+                <li class="glide__slide"><img src="../HotelSiteApp/image/2.jpeg" alt="" width="300px" height="300px"></li>
+                <li class="glide__slide"><img src="../HotelSiteApp/image/3.jpeg" alt="" width="300px" height="300px"></li>
+                <li class="glide__slide"><img src="../HotelSiteApp/image/4.jpeg" alt="" width="300px" height="300px"></li>
+                <li class="glide__slide"><img src="../HotelSiteApp/image/5.jpeg" alt="" width="300px" height="300px"></li>
+                <li class="glide__slide"><img src="../HotelSiteApp/image/6.jpeg" alt="" width="300px" height="300px"></li>
             </ul>
         </div>
         <div class="glide__arrows" data-glide-el="controls">
@@ -79,17 +81,12 @@
             <button class="glide__bullet" data-glide-dir="=5"></button>
         </div>
     </div>
-    <!-- Bookking form -->
-    <section></section>
     <!-- Info -->
-    <footer>
+    <section id="registration">
         <div class="container_info">
             <form class="info_form">
                 <hr>
                 <h1 class="info_header">Get in touch with us!</h1>
-                <p>info@sahilhostel.com</p>
-                <p>Zarifa Aliyeva str. 27 ( new 61 )</p>
-                <p>TEL:+994(50) 888-21-01</p>
                 <hr>
                 <label for="fname">Name</label>
                 <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
@@ -111,9 +108,16 @@
             
             </form>
         </div>
-        <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.301771058101!2d30.638360851128603!3d50.39821339890792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4523fb1edb1%3A0x6612bd9c908002b6!2z0YPQuy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0JzQuNGI0YPQs9C4LCAyLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1563351844673!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </section>
+    <footer id="address">
+        <div class="footer address">
+            <h4>How to get to the hotel?</h4> 
+            <p>03058, Kiev city, Zahidna street, 12 <br>
+            - from the Central Railway Station use tram #1 or #3 and go to the stop “Aviation University” (total time about 30 minutes) (distance 5,8 km) <br> 
+            - from the Polytechnic Institute Metro Station use bus #442 and go to the stop “Aviation University” (distance 3,2 km) <br>
+            - from the Boryspil airport use SkyBus and go to the Central Railway Station, from the Central Railway Station use tram #1 or #3 and go to the stop “Aviation University”</p> 
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2543.301771058101!2d30.638360851128603!3d50.39821339890792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c4523fb1edb1%3A0x6612bd9c908002b6!2z0YPQuy4g0JDQu9C10LrRgdCw0L3QtNGA0LAg0JzQuNGI0YPQs9C4LCAyLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1563351844673!5m2!1sru!2sua" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
     </footer>
     </body>
 </html>

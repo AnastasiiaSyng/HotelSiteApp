@@ -22,7 +22,12 @@ document.addEventListener('DOMContentLoaded', function () {
             room: roomInput,
             needs: needsInput,
         }
-        
+
+        var valid = new Validator();
+        valid.validate(nameInput, "name");
+
+        console.log(valid.validate(nameInput, "name"))
+
         if (validateReservation()) {
             if (localStorage.getItem('valueInput') === null) {
                 var valueInput = [];
