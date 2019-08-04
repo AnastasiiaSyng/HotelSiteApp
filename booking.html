@@ -5,10 +5,9 @@
     <meta charset="utf-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css"> 
-    <!-- <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"> -->
-    <script src="savebookingtolocals.js"></script>
+    <script src="savebooking.js"></script>
     <script src="validator.js"></script>
-    <script src="validatereservation.js"></script>
+    <script src="bookingvalidation.js"></script>
 </head>
 <body>
     <div class="booking">
@@ -16,10 +15,8 @@
         <h1>Booking&Details</h1>
         <hr>
         <div class="form_booking">
-            <form id="inputForm" name="bookingForm">
-                <div>
-                    <div id="bookingList"></div>
-                </div>
+            <form id="bookingForm" name="bookingForm">
+                <div id="bookingMessage"></div>
                 <div class="form-group" >
                     <label for="nameInput">Name</label>
                     <input type="text" id="nameInput" class="form_control" placeholder="Put your name" required>
@@ -37,8 +34,8 @@
                     <input type="date" name="calendar" id="departureInput" max="2019-09-01" min="2019-08-01" required>
                 </div>
                 <div class="form-group">
-                    <label for="peopleInput">People</label>
-                    <select id="peopleInput" class="form_control">
+                    <label for="guests">Guests</label>
+                    <select id="guests" class="form_control">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -46,8 +43,8 @@
                     </select> 
                 </div>
                 <div class="form-group">
-                    <label for="roomInput">Room</label>
-                    <select id="roomInput" class="form_control">
+                    <label for="roomType">Room type</label>
+                    <select id="roomType" class="form_control">
                         <option value="single">single</option>
                         <option value="double">double</option>
                         <option value="quadro">quadro</option>

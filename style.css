@@ -1,10 +1,8 @@
-
 html {
     font-family: sans-serif;
 }
 
 /* NAVBAR STYLE */
-
 
 .navbar__menu {
 	width: 100%; 
@@ -35,6 +33,10 @@ html {
     color: rgb(5, 5, 23);
 }
 
+.navbar__nemu__border a {
+    border-right: 1px solid maroon;
+}
+
 .navbar__menu li ul {
 	display: none; 
 	position: absolute;
@@ -51,9 +53,7 @@ html {
     display: block; 
 }
 
-
 /* HEADER STYLE */
-
 
 .header {
     border-radius: 4px; 
@@ -102,13 +102,12 @@ html {
     }
 }
 
-
 /* BUTTON-BACK */
-
 
 .button {
     margin: 40px 0px 0px;
 }
+
 .button-back {
     display: inline-block;
     color: white;
@@ -126,9 +125,7 @@ html {
     background-color:  rgb(32, 51, 123); 
 }
 
-
 /* RESERVATION STYLE */
-
 
 .table__title {
     font-size: 30px;
@@ -154,11 +151,9 @@ tr, td {
     border-color: white;
 }
 
-
 /* BOOKING STYLE */
 
-
-#inputForm {
+#bookingForm {
     width: 400px;
 }
 
@@ -222,10 +217,8 @@ tr, td {
         font-size: 15px;
     }
 }
-
  
 /* SERVICES STYLE */
-
 
 .reservation__title {
     text-align: center;
@@ -290,8 +283,6 @@ tr, td {
 }
 
 /* CONTAINER_INFO */
-/* Style inputs */
-
 
 .container_info input[type=text], select, textarea {
     width: 100%;
@@ -324,6 +315,7 @@ tr, td {
 
 .info_header {
     text-align: center;
+    padding: 20px;
 }
 
 /* ADDRESS*/

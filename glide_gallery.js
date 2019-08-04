@@ -1,5 +1,3 @@
-// Gallery js code 
-
 document.addEventListener('DOMContentLoaded', function (event) {
     var glide = new Glide('.glide', {
         type: 'carousel',
@@ -15,7 +13,4 @@ document.addEventListener('DOMContentLoaded', function (event) {
         }
     }) 
     glide.mount()
-})
-
-
-
+});
