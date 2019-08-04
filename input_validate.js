@@ -1,4 +1,4 @@
-function inputValidator(value, ruleName) {
+function inputValidate(value, ruleName) {
 
     var rules = {
         name: /^[A-Za-z\-'\s]+$/,
@@ -15,4 +15,3 @@ function inputValidator(value, ruleName) {
     }
 };
 
-console.log(inputValidator("nastya", "name"))

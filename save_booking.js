@@ -43,7 +43,13 @@ function saveBooking (e) {
         needs: reservationForm["needsInput"].value,
     }
 
-    if 
+    if (!inputValidate(bookingDetails.name, "name") 
+        || !inputValidate(bookingDetails.email, "email") 
+        || !inputValidate(bookingDetails.arrive, "date") 
+        || !inputValidate(bookingDetails.departure, "date")) {
+        alert("invalid input parameters!");
+        return false;
+    }
 
     var arriveDate = bookingDetails.arrive.split('-');
     bookingDetails.arrive = new Date(arriveDate[0], arriveDate[1], arriveDate[2]);
@@ -52,14 +58,14 @@ function saveBooking (e) {
     bookingDetails.departure = new Date(departureDate[0], departureDate[1], departureDate[2]);
 
     if (bookingValidation(bookingDetails)) {
-        var valueInput = JSON.parse(localStorage.getItem('valueInput')); 
+        var bookingList = JSON.parse(localStorage.getItem('valueInput')); 
         
-        if (!valueInput) {
-            var valueInput = [];
+        if (!bookingList) {
+            var bookingList = [];
         }
 
-        valueInput.push(bookingDetails);
-        localStorage.setItem('valueInput', JSON.stringify(valueInput));
+        bookingList.push(bookingDetails);
+        localStorage.setItem('bookingList', JSON.stringify(bookingList));
 
         showConfirmMessage(bookingDetails);
         
