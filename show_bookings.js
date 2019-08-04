@@ -8,9 +8,8 @@ function colorCells(rowElement, start, end, colour) {
     } else {
         throw "invalid parameter(s)!"
     } 
-}
+};
 
-// TODO: should work with any month
 function showBookings() {
     var bookingList = JSON.parse(localStorage.getItem("valueInput"));
 

@@ -1,7 +1,3 @@
-/* TODO: 
-    - rename file, ex: inputValidator
-    - use function
-*/
 function inputValidator(value, ruleName) {
 
     var rules = {
@@ -17,7 +13,6 @@ function inputValidator(value, ruleName) {
     } else {
         return false;
     }
-}
+};
 
-// console.log(inputValidator("", "date"))
-// console.log(inputValidator(foo, bar))
+console.log(inputValidator("nastya", "name"))

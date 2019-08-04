@@ -9,7 +9,7 @@ function bookingValidation(newBookingDetails) {
     var newBookingDepartureDay = newBookingDetails.departure.getDate();
 
     for (var i = 0; i < bookingList.length; i++) {
-        if (newBookingDetails.roomType == bookingList[i].roomType) {
+        if (newBookingDetails.room == bookingList[i].room) {
             var bookingArriveDay = new Date(bookingList[i].arrive).getDate();
             var bookingDepartureDay = new Date(bookingList[i].departure).getDate();
             
