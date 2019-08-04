@@ -11,7 +11,7 @@ function colorCells(rowElement, start, end, colour) {
 };
 
 function showBookings() {
-    var bookingList = JSON.parse(localStorage.getItem("valueInput"));
+    var bookingList = JSON.parse(localStorage.getItem("bookings"));
 
     for (var i = 0; i < bookingList.length; i++) {
         var roomType = bookingList[i].room;

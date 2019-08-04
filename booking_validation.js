@@ -1,5 +1,5 @@
 function bookingValidation(newBookingDetails) {
-    var bookingList = JSON.parse(localStorage.getItem("valueInput"));
+    var bookingList = JSON.parse(localStorage.getItem("bookings"));
 
     if (!bookingList) {
         bookingList = [];

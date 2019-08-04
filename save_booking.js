@@ -7,7 +7,7 @@ function formatDate(date) {
     var day = date.getDate();
     if (day < 10) day = '0' + day;
   
-    var month = date.getMonth() + 1;
+    var month = date.getMonth();
     if (month < 10) month = '0' + month;
   
     var year = date.getFullYear() % 100;
@@ -58,14 +58,14 @@ function saveBooking (e) {
     bookingDetails.departure = new Date(departureDate[0], departureDate[1], departureDate[2]);
 
     if (bookingValidation(bookingDetails)) {
-        var bookingList = JSON.parse(localStorage.getItem('valueInput')); 
+        var bookingList = JSON.parse(localStorage.getItem('bookings')); 
         
         if (!bookingList) {
             var bookingList = [];
         }
 
         bookingList.push(bookingDetails);
-        localStorage.setItem('bookingList', JSON.stringify(bookingList));
+        localStorage.setItem('bookings', JSON.stringify(bookingList));
 
         showConfirmMessage(bookingDetails);
         
